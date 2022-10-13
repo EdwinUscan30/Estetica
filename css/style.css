@@ -1,0 +1,214 @@
+:root{
+    --Primario: #F2D1D1;
+    --Secundario: #DAEAF1;
+    --Personalizado: #C6DCE4;
+
+    --FuentePrincipal: 'Bokor', cursive;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--FuentePrincipal);
+}
+
+
+.izquierda{
+    background-color: var(--Primario);
+    height: 100vh;
+    width: 50%;
+}
+
+.izquierda h2{
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    text-transform: uppercase;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.izquierda p{
+    font-size: 19px;
+    line-height: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+.izquierda a{
+    border: 5px solid white;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+} 
+
+.link a:hover{
+    background: var(--Secundario);
+    color: black;
+    transition: all .90s;
+    border: 5px solid black;
+}
+
+.izquierda .link{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.derecha{
+    background: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.dividida{
+    display: flex;
+}
+
+/* Seccion productos */
+
+.producto{
+    width: 100%;
+    height: 100vh;
+    background: var(--Secundario);
+}
+
+.producto h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    margin-bottom: 60px;
+}
+
+.card{
+    margin: 20px;
+    width: 300px;
+    height: 390px;
+    border-radius: 7px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s;
+}
+
+.content h2{
+    color: white;
+    margin: 10px 0;
+}
+
+.content a{
+    color: white;
+    text-decoration: none;
+}
+
+.card:hover .content{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+/* Seccion ofertas */
+.hero{
+    background: var(--Primario);
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero_picture{
+    margin-bottom: 1em;
+}
+
+.hero_img{
+    display: block;
+    width: 95vh;
+    padding: 10px;
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.hero_title{
+    font-size: 70px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero_parafo{
+    line-height: 1.5;
+    font-weight: bold;
+    padding: .7em 0;
+}
+
+.hero_cta{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    background: #DAEAF1;
+    padding: 20px 30px;
+}
+
+/* Footer */
+.footer{
+    background: var(--Personalizado);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_title{
+    color: black;
+    text-align: center;
+    font-size: 45px;
+}
+
+.footer_ing{
+    color: black;
+    text-align: center;
+}
+
+@media screen and (min-width: 850px) {
+    .hero{
+        flex-direction: row;
+        align-items: center;
+    }
+    .hero_picture{
+        flex-grow: 1;
+    }
+    .hero_img{
+        max-width: none;
+    }
+}
+
